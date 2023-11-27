@@ -5,6 +5,8 @@
 
 void setup() {
   Serial.begin(9600); //Check baudrate.
+  //Wire.begin(3); //Try if i2c not working.
+  Wire.setModule(3); //Tive specific funtion, selects i2c module 3 (PD_0 and PD_1)
   Wire.begin(); //Default SDA and SCL pins PA_6 PA_7. Must change schematic or find another way.
 }
 
